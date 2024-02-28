@@ -1,0 +1,30 @@
+### Find all
+GET http://localhost:8080/api/v1/todo
+
+### Find by id
+GET http://localhost:8080/api/v1/todo/d08775ee-b6a3-4728-87e8-c63508f4ab98
+
+### Created
+POST http://localhost:8080/api/v1/todo
+Content-Type: application/json
+
+{
+  "id": "",
+  "title": "",
+  "description": "",
+  "status": "CREATED"
+}
+
+### Updated
+PUT http://localhost:8080/api/v1/todo/fbe6a5a0-8a3b-4673-b82e-29eb5d4528d7
+content-type: application/json
+
+{
+  "title": "New Title",
+  "description": "Holis"
+}
+
+### Deleted
+DELETE http://localhost:8080/api/v1/todo/fbe6a5a0-8a3b-4673-b82e-29eb5d4528d7
+
+

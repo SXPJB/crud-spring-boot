@@ -14,7 +14,7 @@ public enum TodoStatus {
     private final int id;
     private final String name;
 
-    private TodoStatus(int id, String name) {
+    TodoStatus(int id, String name) {
         this.id = id;
         this.name = name;
     }

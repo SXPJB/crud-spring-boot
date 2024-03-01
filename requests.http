@@ -2,29 +2,28 @@
 GET http://localhost:8080/api/v1/todo
 
 ### Find by id
-GET http://localhost:8080/api/v1/todo/d08775ee-b6a3-4728-87e8-c63508f4ab98
+GET http://localhost:8080/api/v1/todo/5617844b-1bdc-4ab9-a8ae-cb33bb09c577
 
 ### Created
 POST http://localhost:8080/api/v1/todo
 Content-Type: application/json
 
 {
-  "id": "",
-  "title": "",
+  "title": "My First Todo",
   "description": "",
   "status": "CREATED"
 }
 
 ### Updated
-PUT http://localhost:8080/api/v1/todo/fbe6a5a0-8a3b-4673-b82e-29eb5d4528d7
+PATCH http://localhost:8080/api/v1/todo/5617844b-1bdc-4ab9-a8ae-cb33bb09c577
 content-type: application/json
 
 {
-  "title": "New Title",
-  "description": "Holis"
+  "description": "Add new description"
 }
 
 ### Deleted
-DELETE http://localhost:8080/api/v1/todo/fbe6a5a0-8a3b-4673-b82e-29eb5d4528d7
+DELETE http://localhost:8080/api/v1/todo/eba1f6fa-7a36-4cd4-a370-e0b4628d0c14
 
-
+### Helth check
+GET http://localhost:8080/healthcheck

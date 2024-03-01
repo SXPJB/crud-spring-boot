@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  bd:
+  db:
     image: postgres:latest
     container_name: bd
     environment:
@@ -11,6 +11,11 @@ services:
       - "5432:5432"
     volumes:
       - dbVolume:/var/lib/postgresql/data
+  todoapp:
+    build: .
+    container_name: todoApp
+    ports:
+      - "8080:8080"
 
 volumes:
     dbVolume:

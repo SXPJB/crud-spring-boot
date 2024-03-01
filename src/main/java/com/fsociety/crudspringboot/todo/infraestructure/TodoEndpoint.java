@@ -12,6 +12,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/v1/todo")
 public class TodoEndpoint {
+
     private final TodoService todoService;
 
     public TodoEndpoint(TodoService todoService) {
@@ -33,7 +34,7 @@ public class TodoEndpoint {
         return ResponseEntity.ok(todoService.create(todo));
     }
 
-    @PutMapping("/{id}")
+    @PatchMapping("/{id}")
     public ResponseEntity<Todo> update(@PathVariable UUID id, @RequestBody Map<String, Object> data) {
         return ResponseEntity.ok(todoService.update(id,data));
     }
